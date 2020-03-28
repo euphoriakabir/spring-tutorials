@@ -1,0 +1,30 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean class="CollectionTest" id="ct">
+		<property name="cityName">
+			<list>
+				<value>Patna</value>
+				<value>Gaya</value>
+				<value>Kanpur</value>
+				<value>Lucknow</value>
+			</list>
+		</property>
+		<property name="sea">
+			<set>
+				<value>Red Sea</value>
+				<value>Arabian Sea</value>
+				<value>Bay of Bengal</value>
+				<value>Chinese Sea</value>
+				<value>Red Sea</value>
+			</set>
+		</property>
+		<property name="countryCapital">
+			<map>
+				<entry key="IN" value="New Delhi"/>
+				<entry key="RU" value="Moscow"/>
+				<entry key="NZ" value="AuckLand"/>
+			</map>
+		</property>
+	</bean>
+</beans>			

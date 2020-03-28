@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+	<bean class="DataClass" id="dc">
+		<property name="candidateName">
+			<util:list list-class="java.util.LinkedList">
+				<value>Ankita Noopur</value>
+				<value>Amrita Sinha</value>
+				<value>Mary Sinha</value>
+			</util:list>
+		</property>
+		<property name="gender">
+			<util:set set-class="java.util.LinkedHashSet">
+				<value>Female</value>
+				<value>Female</value>
+			</util:set>
+		</property>
+		<property name="marksRule">
+			<util:map map-class="java.util.LinkedHashMap">
+				<entry key="pass" value="45"/>
+				<entry key="distinction" value="75"/>
+			</util:map>
+		</property>
+	</bean>
+
+</beans>

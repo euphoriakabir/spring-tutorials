@@ -1,0 +1,27 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	
+	<bean class="com.awcsoftware.employee.dto.Address" id="address">
+		<property name="houseNo" value="1001"/>
+		<property name="locality">
+			<value>Kankerbagh</value>
+		</property>
+		<property name="pincode">
+			<value>800020</value>
+		</property>
+	</bean>
+	
+	<bean class="com.awcsoftware.employee.dto.Employee" id="emp">
+		<property name="eid" value="101"/>
+		<property name="ename">
+			<value>Pratik</value>
+		</property>
+		<property name="esalary">
+			<value>100000</value>
+		</property>
+		<property name="address">
+			<ref bean="address"/>
+		</property>
+	</bean>
+</beans>			
