@@ -1,0 +1,14 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean class="Test" id="test">
+		<property name="prop">
+			<props>
+				<prop key="driver">com.mysql.jdbc.Driver</prop>
+				<prop key="url">jdbc:mysql://localhost:3306/hibernate</prop>
+				<prop key="user">root</prop>
+				<prop key="password">My@SQL</prop>
+			</props>
+		</property>
+	</bean>
+</beans>			
