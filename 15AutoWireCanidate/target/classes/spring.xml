@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+	<bean class="Engine" id="e1" autowire-candidate="false">
+		<constructor-arg index="0">
+			<value>2000</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>X20</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="Engine" id="e2">
+		<constructor-arg index="1">
+			<value>Y10</value>
+		</constructor-arg>
+		<constructor-arg index="0">
+			<value>2000</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="Car" id="c1" autowire="byType">
+		<property name="name">
+			<value>Nexon</value>
+		</property>
+	</bean>
+
+</beans>
