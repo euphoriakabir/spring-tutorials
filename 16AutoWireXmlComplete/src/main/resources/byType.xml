@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+	<bean class="org.apache.commons.dbcp2.BasicDataSource"/>
+
+    <bean class="properties.PropertiesReader">
+    	<constructor-arg index="0">
+    		<util:properties location="db.properties"/>
+    	</constructor-arg>
+    </bean>
+
+	<bean class="dao.DBConnection" autowire="byType" id="dbconn"/>
+	
+</beans>
